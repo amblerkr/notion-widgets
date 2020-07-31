@@ -1,19 +1,34 @@
-<div id="instagram-feed2"></div>
+<!DOCTYPE html>
+<html lang="en">
 
-<script src="./script.js"></script>
-<script>
-    (function(){
-        new InstagramFeed({
-            'username': 'taeyeon_ss',
-            'container': document.getElementById("instagram-feed2"),
-            'display_profile': false,
-            'display_biography': false,
-            'display_gallery': true,
-            'callback': null,
-            'styling': true,
-            'items': 9,
-            'items_per_row': 3,
-            'margin': 1 
-        });
-    })();
-</script>
+<head>
+    <meta charset="UTF-8">
+    <title>인스타그램</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="instagram-feed2"></div>
+
+    <script src="./script.js"></script>
+    <script>
+        (function() {
+            new InstagramFeed({
+                'username': 'taeyeon_ss',
+                'container': document.getElementById("instagram-feed2"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'callback': null,
+                'styling': true,
+                'items': 9,
+                'items_per_row': 3,
+                'margin': 1
+            });
+        })();
+
+    </script>
+
+</body>
+
+</html>
