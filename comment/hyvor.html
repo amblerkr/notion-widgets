@@ -1,17 +1,48 @@
-<div id="hyvor-talk-view"></div>
-<script type="text/javascript">
-    var HYVOR_TALK_WEBSITE = 1441; // DO NOT CHANGE THIS
-    var HYVOR_TALK_CONFIG = {
-        url: "https://notion.ambler.kr/",
-        id: "main"
-    };
-</script>
-<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
-body,
-body.theme-light {
-  background-color: #fff;
-  padding: 1rem;
-}
-</style>
+<head>
+	<meta charset="UTF-8">
+	<title>Ambler</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+KR|Noto+Sans+KR">
+</head>
+
+<body>
+	<div id="hyvor-talk-view"></div>
+	<script type="text/javascript">
+		var HYVOR_TALK_WEBSITE = 1441; // DO NOT CHANGE THIS
+		var HYVOR_TALK_CONFIG = {
+			url: "https://notion.ambler.kr/",
+			id: "main"
+		};
+
+	</script>
+	<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
+
+	<style>
+		body {
+			background-color: #fff;
+			max-width: 100% !important;
+		}
+
+		::-webkit-scrollbar {
+			width: 3px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: #aaa;
+		}
+
+	</style>
+	<script>
+		if (self !== top) {
+
+		} else {
+			location.href = "https://ambler.kr/";
+		}
+
+	</script>
+
+</body>
+
+</html>
