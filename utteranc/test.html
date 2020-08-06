@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="/static/icon.ico">
+    <link rel="icon" href="/static/icon.png">
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+KR|Noto+Sans+KR">
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+    {% block script %}{% endblock %}
+</body>
+
+</html>
+{% block title %}Comment{% endblock %}
+
+{% block stylesheet %}
+
+<script src="https://utteranc.es/client.js"
+        repo="amblerkr/notion-comment"
+        issue-term="pathname"
+        label="질문"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<style>
+    {% if theme == 'dark'%}
+    body {
+        background-color: #2f3437;
+    }
+    ::-webkit-scrollbar {
+        width: 3px;        
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
+    {% else %}
+    body {
+        background-color: #fff;
+    }
+    ::-webkit-scrollbar {
+        width: 3px;        
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #aaa;
+    }
+    {% endif %}
+    .utterances {
+        max-width: 100% !important;
+    }
+    
+</style>
+<script>
+    if(self !== top) {
+        
+    } else {
+        location.href = "https://ambler.kr";
+    }
+</script>
+{% endblock %}

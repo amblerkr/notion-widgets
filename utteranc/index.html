@@ -1,8 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Comment{% endblock %}
+
+{% block stylesheet %}
+<style>
+    {% if theme == 'dark'%}
+    body {
+        background-color: #2f3437;
+    }
+    ::-webkit-scrollbar {
+        width: 3px;        
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
+    {% else %}
+    body {
+        background-color: #fff;
+    }
+    ::-webkit-scrollbar {
+        width: 3px;        
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #aaa;
+    }
+    {% endif %}
+    .utterances {
+        max-width: 100% !important;
+    }
+    
+</style>
+{% endblock %}
+
+{% block script %}
 <script src="https://utteranc.es/client.js"
-        repo="amblerkr/notion-comment"
-        issue-term="pathname"
-        label="질문"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+    repo="{{ username }}/{{ repository }}"
+    issue-term="pathname"
+    theme="github-{% if theme == 'dark'%}dark{% else %}light{% endif %}"
+    crossorigin="anonymous"
+    async>
 </script>
+<script>
+    if(self !== top) {
+        
+    } else {
+        location.href = "https://www.notion.so/{{ pk }}";
+    }
+</script>
+{% endblock %}
