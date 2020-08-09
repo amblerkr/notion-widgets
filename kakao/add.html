@@ -1,22 +1,50 @@
-<div
-  id="kakao-talk-channel-add-button"
-  data-channel-public-id="_YtExoxb"
-  data-size="large"
-  data-support-multiple-densities="true"
-></div>
+<!DOCTYPE html>
+<html lang="en">
 
-<script>
-  window.kakaoAsyncInit = function() {
-    Kakao.Channel.createAddChannelButton({
-      container: '#kakao-talk-channel-add-button',
-    });
-  };
+<head>
+	<meta charset="UTF-8">
+	<title>Fruition Korea</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+KR|Noto+Sans+KR">
+</head>
 
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://developers.kakao.com/sdk/js/kakao.plusfriend.min.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, 'script', 'kakao-js-sdk');
-</script>
+<body>
+	<div id="kakao-talk-channel-add-button" data-channel-public-id="_YtExoxb" data-size="large" data-support-multiple-densities="true"></div>
+
+	<script>
+		window.kakaoAsyncInit = function() {
+			Kakao.Channel.createAddChannelButton({
+				container: '#kakao-talk-channel-add-button',
+			});
+		};
+
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = 'https://developers.kakao.com/sdk/js/kakao.plusfriend.min.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		})(document, 'script', 'kakao-js-sdk');
+
+	</script>
+	<style>
+		body {
+			background-color: #fff;
+			padding: 1rem;
+			max-width: 100% !important;
+		}
+
+		::-webkit-scrollbar {
+			width: 3px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: #fff;
+		}
+
+	</style>
+
+
+</body>
+
+</html>
